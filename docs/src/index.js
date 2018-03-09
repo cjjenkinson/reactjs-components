@@ -1,77 +1,84 @@
-import classnames from "classnames";
+import classnames from 'classnames';
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React from 'react';
 /* eslint-enable no-unused-vars */
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 
-import BindMixin from "../../src/Mixin/BindMixin";
-import ConfirmExample from "./Confirm";
-import DOMUtil from "../../src/Util/DOMUtil";
-import DropdownExample from "./Dropdown";
-import SelectExample from "./Select";
-import FormExample from "./Form";
-import ListExample from "./List";
-import ModalExample from "./Modal";
-import TableExample from "./Table";
-import TooltipExample from "./Tooltip";
-import Util from "../../src/Util/Util";
+import BindMixin from '../../src/Mixin/BindMixin';
+import ConfirmExample from './Confirm';
+import DOMUtil from '../../src/Util/DOMUtil';
+import DropdownExample from './Dropdown';
+import SelectExample from './Select';
+import FormExample from './Form';
+import ListExample from './List';
+import ModalExample from './Modal';
+import TableExample from './Table';
+import TooltipExample from './Tooltip';
+import MessageExample from './Message';
+import Util from '../../src/Util/Util';
 
-import "./vendor/prettify.js";
+import './vendor/prettify.js';
 
 const navigationItems = [
   {
-    label: "Dropdown",
-    id: "dropdown",
+    label: 'Dropdown',
+    id: 'dropdown',
     component: DropdownExample,
     passScrollContainer: true
   },
   {
-    label: "Select",
-    id: "select",
+    label: 'Select',
+    id: 'select',
     component: SelectExample,
     passScrollContainer: false
   },
   {
-    label: "Form",
-    id: "form",
+    label: 'Form',
+    id: 'form',
     component: FormExample,
     passScrollContainer: false
   },
   {
-    label: "List",
-    id: "list",
+    label: 'List',
+    id: 'list',
     component: ListExample,
     passScrollContainer: false
   },
   {
-    label: "Table",
-    id: "table",
+    label: 'Table',
+    id: 'table',
     component: TableExample,
     passScrollContainer: false
   },
   {
-    label: "Modal",
-    id: "modal",
+    label: 'Modal',
+    id: 'modal',
     component: ModalExample,
     passScrollContainer: false
   },
   {
-    label: "Confirm",
-    id: "confirm",
+    label: 'Confirm',
+    id: 'confirm',
     component: ConfirmExample,
     passScrollContainer: false
   },
   {
-    label: "Tooltip",
-    id: "tooltip",
+    label: 'Tooltip',
+    id: 'tooltip',
     component: TooltipExample,
+    passScrollContainer: true
+  },
+  {
+    label: 'Message',
+    id: 'message',
+    component: MessageExample,
     passScrollContainer: true
   }
 ];
 
 class Docs extends Util.mixin(BindMixin) {
   get methodsToBind() {
-    return ["handlePageScroll", "calculateNodePositions"];
+    return ['handlePageScroll', 'calculateNodePositions'];
   }
 
   constructor() {
@@ -89,7 +96,7 @@ class Docs extends Util.mixin(BindMixin) {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.calculateNodePositions);
+    window.addEventListener('resize', this.calculateNodePositions);
   }
 
   componentDidUpdate() {
@@ -253,26 +260,26 @@ class Docs extends Util.mixin(BindMixin) {
                 <ul>
                   <li>
                     <strong>Independent</strong>
-                    {" "}
+                    {' '}
                     — pick and use only the components you need.
                   </li>
                   <li>
                     <strong>Styled</strong>
-                    {" "}
+                    {' '}
                     — default classes from
-                    {" "}
+                    {' '}
                     <a href="http://mesosphere.github.io/cnvs">Canvas UI</a>
-                    {" "}
+                    {' '}
                     (use is optional).
                   </li>
                   <li>
                     <strong>Customizable</strong>
-                    {" "}
+                    {' '}
                     — properties allow many different settings to adapt to your app.
                   </li>
                   <li>
                     <strong>Reliable</strong>
-                    {" "}
+                    {' '}
                     — each component is rigorously tested.
                   </li>
                 </ul>
@@ -281,7 +288,7 @@ class Docs extends Util.mixin(BindMixin) {
                 <h3>Getting Started</h3>
                 <p>
                   <strong>1.</strong>
-                  {" "}
+                  {' '}
                   From the command line inside of your project:
                 </p>
                 <div className="panel pod flush-right flush-left flush-top">
@@ -320,7 +327,7 @@ var Modal = require('reactjs-components').Modal;`}
                 </div>
                 <p>
                   <strong>4.</strong>
-                  {" "}
+                  {' '}
                   Import LESS files which will add all styles for all components.
                 </p>
                 <div className="panel pod flush-right flush-left flush-top">
@@ -343,7 +350,7 @@ var Modal = require('reactjs-components').Modal;`}
 
 ReactDOM.render(
   <Docs />,
-  document.getElementById("reactjs-components-docs"),
+  document.getElementById('reactjs-components-docs'),
   function() {
     global.prettyPrint();
   }
